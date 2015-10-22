@@ -36,7 +36,7 @@ func hello(rw http.ResponseWriter, req *http.Request, p httprouter.Params) {
 func main() {
     mux := httprouter.New()
     mux.GET("/hello/:name", hello)
-    mux.POST("/user",post)
+    mux.POST("/hello",post)
     server := http.Server{
             Addr:        "0.0.0.0:8080",
             Handler: mux,
